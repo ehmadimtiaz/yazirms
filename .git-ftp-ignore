@@ -1,0 +1,4 @@
+bitbucket-pipelines.yml
+application/config/config.php
+application/config/database.php
+.htaccess
