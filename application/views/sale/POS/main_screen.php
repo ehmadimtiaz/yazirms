@@ -308,7 +308,7 @@ foreach ($notifications as $single_notification){
 <!DOCTYPE html>
 <html>
     <head>
-        <title>iRestora</title>
+        <title>iRestora PLUS</title>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/POS/css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">

@@ -321,7 +321,7 @@ class Common_model extends CI_Model {
         $this->db->where('company_id', $this->session->userdata('company_id'));
         $zoneName = $this->db->get()->row();
         if ($zoneName)
-            date_default_timezone_set($zoneName->timezone);
+            date_default_timezone_set($zoneName->time_zone);
     }
 
     function get_row($table_name, $where_param, $select_param, $group = "", $limit = "") {

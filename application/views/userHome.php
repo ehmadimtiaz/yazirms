@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>iRestora | Restaurant POS with Smart Inventory</title>
+        <title>iRestora PLUS | Next Gen Restaurant POS</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"> 
         <!-- jQuery 3 -->
@@ -490,7 +490,7 @@
             <footer class="main-footer">  
                 <div class="row">
                     <div class="col-md-12" style="text-align: center;">
-                        <strong>iRestora</strong>, Restaurant POS with Smart Inventory 
+                        <strong>iRestora PLUS</strong>, Next Gen Restaurant POS 
                         <div class="hidden-lg">
 
                         </div> 

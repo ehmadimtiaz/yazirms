@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
   ###########################################################
-  # PRODUCT NAME:   iRestora
+  # PRODUCT NAME:   iRestora PLUS
   ###########################################################
   # AUTHOR:     Multidimension Systems
   ###########################################################

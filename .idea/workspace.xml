@@ -201,9 +201,9 @@
       <replace>menu_name</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>G:\server\NEw\htdocs\iRestora\application</dir>
-      <dir>G:\server\NEw\htdocs\iRestora\new_db</dir>
-      <dir>G:\server\NEw\htdocs\iRestora</dir>
+      <dir>G:\server\NEw\htdocs\iRestora PLUS\application</dir>
+      <dir>G:\server\NEw\htdocs\iRestora PLUS\new_db</dir>
+      <dir>G:\server\NEw\htdocs\iRestora PLUS</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
