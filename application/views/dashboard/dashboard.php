@@ -147,8 +147,8 @@
           <div class="box box-info">
           <div class="box-header">
             <i class="fa fa-shopping-bag"></i> 
-            <h3 class="box-title">Dine In/Take Away/Delivery</h3> 
-            <span id="date_range_dtd" style="padding-left: 15px;"><?php echo date('Y-m-01'); ?> to <?php echo date('Y-m-t'); ?> </span><span style="float: right;"><a href=""><i class="fa fa-calendar"></i></a></span>
+            <h3 class="box-title">Dine In/Take Away/Delivery(This Month)</h3> 
+            <!-- <span id="date_range_dtd" style="padding-left: 15px;"><?php echo date('Y-m-01'); ?> to <?php echo date('Y-m-t'); ?> </span><span style="float: right;"><a href=""><i class="fa fa-calendar"></i></a></span> -->
             
           </div>
           <div class="box-body">  
@@ -163,19 +163,19 @@
 
       <div class="row">
         <div class="col-lg-7">
-          <div id="operation_comparision_range_fields">
+<!--           <div id="operation_comparision_range_fields">
             <input class="form-group" type="text" name="operation_comparision_input" id="operation_comparision_input"/>
             <div style="padding:0% 5%">
               <button class="btn btn-primary" name="operation_comparision_submit" id="operation_comparision_submit">Submit</button>
               <button class="btn btn-primary" name="operation_comparision_cancel" id="operation_comparision_cancel">Cancel</button>
             </div>
             
-          </div>
+          </div> -->
           <div class="box box-info">
           <div class="box-header">
             <i class="fa fa-truck"></i> 
-            <h3 class="box-title">Operational Comparision</h3> 
-            <span id="date_range_dtd" style="padding-left: 220px;"><?php echo date('Y-m-01'); ?> to <?php echo date('Y-m-t'); ?> </span><span style="float: right;"><a id="operational_coparision_range" style="cursor:pointer;"><i class="fa fa-calendar"></i></a></span>
+            <h3 class="box-title">Operational Comparision(This Month)</h3> 
+   <!--          <span id="date_range_dtd" style="padding-left: 220px;"><?php echo date('Y-m-01'); ?> to <?php echo date('Y-m-t'); ?> </span><span style="float: right;"><a id="operational_coparision_range" style="cursor:pointer;"><i class="fa fa-calendar"></i></a></span> -->
           </div>
           <div class="box-body" style="height: 280px;">  
               <div class="chart"> 
