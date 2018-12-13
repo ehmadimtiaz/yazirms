@@ -96,11 +96,47 @@ class Authentication extends CI_Controller {
                         redirect("Outlet/outlets");
                     } else {
                         if($user_information->role=="Kitchen User"){
+                            $outlet_id = $user_information->outlet_id;
+                            $outlet_session = array();
+                            $outlet_session['outlet_id'] = $outlet_details->id;
+                            $outlet_session['outlet_name'] = $outlet_details->outlet_name;
+                            $outlet_session['address'] = $outlet_details->address;
+                            $outlet_session['outlet_phone'] = $outlet_details->phone;
+                            $outlet_session['collect_vat'] = $outlet_details->collect_vat;
+                            $outlet_session['vat_reg_no'] = $outlet_details->vat_reg_no;
+                            $outlet_session['invoice_print'] = $outlet_details->invoice_print;  
+                            $outlet_session['invoice_footer'] = $outlet_details->invoice_footer;  
+                            $outlet_session['pre_or_post_payment'] = $outlet_details->pre_or_post_payment;  
+                            $this->session->set_userdata($outlet_session);
                             redirect("Kitchen/panel");
                         }elseif($user_information->role=="Bar User"){
+                            $outlet_id = $user_information->outlet_id;
+                            $outlet_session = array();
+                            $outlet_session['outlet_id'] = $outlet_details->id;
+                            $outlet_session['outlet_name'] = $outlet_details->outlet_name;
+                            $outlet_session['address'] = $outlet_details->address;
+                            $outlet_session['outlet_phone'] = $outlet_details->phone;
+                            $outlet_session['collect_vat'] = $outlet_details->collect_vat;
+                            $outlet_session['vat_reg_no'] = $outlet_details->vat_reg_no;
+                            $outlet_session['invoice_print'] = $outlet_details->invoice_print;  
+                            $outlet_session['invoice_footer'] = $outlet_details->invoice_footer;  
+                            $outlet_session['pre_or_post_payment'] = $outlet_details->pre_or_post_payment;  
+                            $this->session->set_userdata($outlet_session);
                             redirect("Bar/panel");
                         }elseif($user_information->role=="POS User")
                         {
+                            $outlet_id = $user_information->outlet_id;
+                            $outlet_session = array();
+                            $outlet_session['outlet_id'] = $outlet_details->id;
+                            $outlet_session['outlet_name'] = $outlet_details->outlet_name;
+                            $outlet_session['address'] = $outlet_details->address;
+                            $outlet_session['outlet_phone'] = $outlet_details->phone;
+                            $outlet_session['collect_vat'] = $outlet_details->collect_vat;
+                            $outlet_session['vat_reg_no'] = $outlet_details->vat_reg_no;
+                            $outlet_session['invoice_print'] = $outlet_details->invoice_print;  
+                            $outlet_session['invoice_footer'] = $outlet_details->invoice_footer;  
+                            $outlet_session['pre_or_post_payment'] = $outlet_details->pre_or_post_payment;  
+                            $this->session->set_userdata($outlet_session);
                             redirect("Sale/POS");
                         }else{
                             $outlet_id = $user_information->outlet_id;
