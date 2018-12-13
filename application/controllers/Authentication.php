@@ -80,7 +80,7 @@ class Authentication extends CI_Controller {
                     //Company Information 
 
                     $login_session['currency'] = $setting_info->currency;
-                    $login_session['company_time_zone'] = $setting_info->time_zone;
+                    $login_session['time_zone'] = $setting_info->time_zone;
                     $login_session['date_format'] = $setting_info->date_format;
 
                     //Menu access information
@@ -316,7 +316,7 @@ class Authentication extends CI_Controller {
 
         //company Information
         $this->session->unset_userdata('currency');
-        $this->session->unset_userdata('company_time_zone');
+        $this->session->unset_userdata('time_zone');
         $this->session->unset_userdata('date_format');
 
         redirect('Authentication/index');
@@ -328,26 +328,26 @@ class Authentication extends CI_Controller {
         if ($this->input->post('submit')) {
 
             $this->form_validation->set_rules('date_format', "Date Format", "required|max_length[50]");
-            $this->form_validation->set_rules('timezone', "Country Time Zone", "required|max_length[50]");
+            $this->form_validation->set_rules('time_zone', "Country Time Zone", "required|max_length[50]");
             $this->form_validation->set_rules('currency', "Currency", "required|max_length[50]");
             if ($this->form_validation->run() == TRUE) {
                 $org_information = array();
                 $org_information['date_format'] = $this->input->post($this->security->xss_clean('date_format'));
-                $org_information['timezone'] = $this->input->post($this->security->xss_clean('timezone'));
+                $org_information['time_zone'] = $this->input->post($this->security->xss_clean('time_zone'));
                 $org_information['currency'] = $this->input->post($this->security->xss_clean('currency'));
-                $org_information['company_id'] = $vat['company_id'] = $this->session->userdata('company_id');
+                $org_information['company_id'] = $this->session->userdata('company_id');
  
                 $this->Common_model->updateInformation($org_information, $id, "tbl_settings");
                 $this->session->set_flashdata('exception', 'Information has been updated successfully!');
                 //set session on update
                 $this->session->set_userdata('currency', $org_information['currency']);  
-                $this->session->set_userdata('timezone', $org_information['timezone']);  
+                $this->session->set_userdata('time_zone', $org_information['time_zone']);  
                 $this->session->set_userdata('date_format', $org_information['date_format']);  
                 redirect('Authentication/setting/'.$org_information['company_id']);
             } else { 
                 $data = array();
                 $data['setting_information'] = $this->Authentication_model->getSettingInformation($company_id);
-                $data['country_time_zones'] = $this->Common_model->getAllForDropdown("tbl_time_zone");
+                $data['time_zones'] = $this->Common_model->getAllForDropdown("tbl_time_zone");
                 $data['currencies'] = $this->Common_model->getAllForDropdown("tbl_admin_currencies");
                 $data['main_content'] = $this->load->view('authentication/setting', $data, TRUE);
                 $this->load->view('userHome', $data); 
@@ -355,7 +355,7 @@ class Authentication extends CI_Controller {
         } else { 
             $data = array();
             $data['setting_information'] = $this->Authentication_model->getSettingInformation($company_id);
-            $data['country_time_zones'] = $this->Common_model->getAllForDropdown("tbl_time_zone");
+            $data['time_zones'] = $this->Common_model->getAllForDropdown("tbl_time_zone");
             $data['currencies'] = $this->Common_model->getAllForDropdown("tbl_admin_currencies");
             $data['main_content'] = $this->load->view('authentication/setting', $data, TRUE);
             $this->load->view('userHome', $data); 

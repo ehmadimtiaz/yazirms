@@ -136,6 +136,11 @@ class Common_model extends CI_Model {
         $this->db->update($table_name, $data);
     }
 
+    public function updateInformationByCompanyId($data, $company_id, $table_name) {
+        $this->db->where('company_id', $company_id);
+        $this->db->update($table_name, $data);
+    }
+
     public function deletingMultipleFormData($field_name, $primary_table_id, $table_name) {
         $this->db->delete($table_name, array($field_name => $primary_table_id));
     }
@@ -312,12 +317,11 @@ class Common_model extends CI_Model {
 
     public function setDefaultTimezone() {
         $this->db->select("time_zone");
-        $this->db->from('tbl_settings');
-        $this->db->order_by('id', 'DESC');
+        $this->db->from('tbl_settings'); 
         $this->db->where('company_id', $this->session->userdata('company_id'));
         $zoneName = $this->db->get()->row();
         if ($zoneName)
-            date_default_timezone_set($zoneName->time_zone);
+            date_default_timezone_set($zoneName->timezone);
     }
 
     function get_row($table_name, $where_param, $select_param, $group = "", $limit = "") {

@@ -59,8 +59,8 @@ if ($this->session->flashdata('exception')) {
                                 <label>Country Time Zone <span class="required_star">*</span></label>
                                 <select class="form-control select2" id="time_zone" name="time_zone" style="width: 100%;">
                                     <option value="">Select</option>
-                                    <?php foreach ($country_time_zones as $country_time_zone) { ?>
-                                        <option <?= isset($setting_information) && $setting_information->time_zone == $country_time_zone->zone_name ? 'selected' : '' ?> value="<?= $country_time_zone->zone_name ?>"><?= $country_time_zone->zone_name ?></option>
+                                    <?php foreach ($time_zones as $time_zone) { ?>
+                                        <option <?= isset($setting_information) && $setting_information->time_zone == $time_zone->zone_name ? 'selected' : '' ?> value="<?= $time_zone->zone_name ?>"><?= $time_zone->zone_name ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
